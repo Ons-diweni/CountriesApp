@@ -1,0 +1,23 @@
+<p>country-list works!</p>
+<table>
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Population</th>
+        <th>Superficie</th>
+        <th>Continent</th>
+        <th>Produit intérieur brut</th>
+        <th>Image</th>
+    </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let country of countriesList">
+        <td>{{ country.nom}}</td>
+        <td>{{ country.population }}</td>
+        <td>{{ country.superficie }}</td>
+        <td>{{ country.continent }}</td>
+        <td>{{ country.pib}}</td>
+        <td>{{ country.image }}</td>
+      </tr>
+    </tbody>
+  </table>

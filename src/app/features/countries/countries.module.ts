@@ -3,11 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { CountriesRoutingModule } from './countries-routing.module';
 import { CountriesComponent } from './countries.component';
+import { AddCountryComponent } from './add-country/add-country.component';
+import { CountryListComponent } from './country-list/country-list.component';
 
 
 @NgModule({
   declarations: [
-    CountriesComponent
+    CountriesComponent,
+    AddCountryComponent,
+    CountryListComponent
   ],
   imports: [
     CommonModule,
