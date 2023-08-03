@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'CountriesApp';
+  title = 'Gestion de pays';
+  buttonTopRight= 'Exporter en CSV';
+  buttonTopLeft='Recherche';
+  buttonBottom='Ajouter';
 }

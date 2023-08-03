@@ -1,1 +1,16 @@
-<p>header works!</p>
+<p>
+    <mat-toolbar color="primary" class="custom-toolbar">
+        <mat-toolbar-row>
+            <span class="custom-title">{{title}}</span>
+            <span class="example-spacer"></span>
+            <div class="example-spacer-two">
+                <button *ngIf="buttonTopLeft" mat-raised-button class="button">{{buttonTopLeft}}</button>
+                <button *ngIf="buttonTopRight" mat-raised-button class="button">{{buttonTopRight}}</button>
+            </div>
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+            <span class="example-spacer"></span>
+            <button *ngIf="buttonBottom" mat-raised-button class="button">{{buttonBottom}}</button>
+        </mat-toolbar-row>
+    </mat-toolbar>
+</p>

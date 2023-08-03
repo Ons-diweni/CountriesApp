@@ -11,7 +11,7 @@ export class CountryService {
 
   private apiUrl = "http://localhost:3000/countries"
 
-  countryList: any[] = [];
+  countryList: Country[] = [];
 
 
   constructor(private http: HttpClient) { }
