@@ -8,5 +8,5 @@
 
 
 
-• $\ \ \textcolor{blueviolet}{run  }$  : $\ \{json-server \ --watch \  \ db.json }$ 
+## • $\ \ \textcolor{blueviolet}{run-server-with}$  : $\ \{json-server \ --watch \  \ db.json }$ 
 
