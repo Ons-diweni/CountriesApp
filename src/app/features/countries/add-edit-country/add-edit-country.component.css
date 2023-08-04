@@ -1,0 +1,55 @@
+.action {
+    padding: 0px 5px 20px;
+}
+
+.button {
+    flex: 1;
+    width: 25px;
+    height: 40px;
+}
+
+.title {
+    font-size: small;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.content {
+    padding-top: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+
+    mat-form-field {
+        width: 100%;
+    }
+}
+
+.selectLabel {
+    font-size: 20px;
+}
+
+.file-name {
+    margin-left: 1rem;
+}
+
+.custumImageButton {
+    bottom: -5px;
+    right: -25px;
+    width: 200px;
+    height: 40px;
+} 
+
+.file-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Aligner horizontalement au centre */
+    gap: 10px; /* Espacement entre les éléments */
+}
+
+/* Appliquer des styles spécifiques à l'élément span */
+.file-name {
+    font-size: 14px;
+    color: #333;
+}

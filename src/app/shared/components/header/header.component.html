@@ -10,7 +10,7 @@
         </mat-toolbar-row>
         <mat-toolbar-row>
             <span class="example-spacer"></span>
-            <button *ngIf="buttonBottom" mat-raised-button class="button">{{buttonBottom}}</button>
+            <button *ngIf="buttonBottom" mat-raised-button class="button" (click)='openAddFrom()'>{{buttonBottom}}</button>
         </mat-toolbar-row>
     </mat-toolbar>
 </p>

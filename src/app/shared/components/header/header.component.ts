@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { AddEditCountryComponent } from 'src/app/features/countries/add-edit-country/add-edit-country.component';
 
 @Component({
   selector: 'app-header',
@@ -7,14 +9,16 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @Input() title: string= '';
-  @Input() buttonTopRight: string= '';
-  @Input() buttonTopLeft: string= '';
-  @Input() buttonBottom: string= '';
-  
+  @Input() title: string = '';
+  @Input() buttonTopRight: string = '';
+  @Input() buttonTopLeft: string = '';
+  @Input() buttonBottom: string = '';
 
+  constructor(private _dialog: MatDialog) { }
 
-  constructor() { }
+  openAddFrom() {
+    this._dialog.open(AddEditCountryComponent)
+  }
 
   ngOnInit(): void {
   }

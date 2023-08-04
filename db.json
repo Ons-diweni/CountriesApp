@@ -1,6 +1,7 @@
 {
   "countries": [
-    { "id": 1,
+    {
+      "id": 1,
       "nom": "France",
       "population": 67059887,
       "superficie": 643801,
@@ -34,6 +35,15 @@
       "continent": "Europe",
       "pib": 2055080,
       "image": "https://img.emg-services.net/htmlpages/htmlpage19896/brazil-thumbnail.jpg"
+    },
+    {
+      "nom": "Ones",
+      "population": 7964531,
+      "superficie": 7964531,
+      "continent": "Afrique",
+      "pib": 79846513,
+      "image": "C:\\fakepath\\2xuiab6o-qc.jpg",
+      "id": 2
     }
   ]
 }
