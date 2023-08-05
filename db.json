@@ -3,27 +3,27 @@
     {
       "nom": "France",
       "population": 4637963,
-      "superficie": 89465312,
+      "superficie": 551695,
       "continent": "Europe",
-      "pib": 9465132,
+      "pib": 2958,
       "image": "https://cdn.sortiraparis.com/images/80/83517/875027-visuel-paris-visuel-france-tour-eiffel-drapeau.jpg",
       "id": 3
     },
     {
       "nom": "Tunisie",
-      "population": 12000000,
-      "superficie": 79864531,
+      "population": 12293610,
+      "superficie": 163610,
       "continent": "Afrique",
-      "pib": 846555,
+      "pib": 48972,
       "image": "https://geo.img.pmdstatic.net/fit/https.3A.2F.2Fi.2Epmdstatic.2Enet.2Fgeo.2F2022.2F03.2F28.2F395b98e3-803a-48dd-8b2a-cb6f3ffd2c8a.2Ejpeg/1200x800/quality/65/sidi-bou-said.jpg",
       "id": 4
     },
     {
       "nom": "Maroc",
-      "population": 1236548,
-      "superficie": 9864513,
+      "population": 38738686,
+      "superficie": 710850,
       "continent": "Afrique",
-      "pib": 88888,
+      "pib": 4150,
       "image": "https://www.usinenouvelle.com/mediatheque/6/5/4/000169456_896x598_c.jpg",
       "id": 5
     }

@@ -1,5 +1,5 @@
 <div mat-dialog-title class="title">
-    <h1>Add new country</h1>
+    <h1>{{data ? 'Update country informations': 'Add new country'}} </h1>
 </div>
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div mat-dialog-content class="content">

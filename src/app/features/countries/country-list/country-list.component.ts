@@ -28,7 +28,9 @@ export class CountryListComponent implements OnInit {
   }
   ngOnInit(): void {
     this.getCountriesList()
-
+    this.countryService.dataUpdated$.subscribe(() => {
+      this.getCountriesList();
+    });
   }
 
   /**
@@ -43,7 +45,7 @@ export class CountryListComponent implements OnInit {
     });
   }
 
-  
+
   /**
    * Call the delete() service and re-execute the getCOuntriesList method to update data
    * @param id 
@@ -69,7 +71,7 @@ export class CountryListComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe({
       next: (val) => {
-        console.log(val);   
+        console.log(val);
         this.getCountriesList();
       },
       error: console.log,
@@ -91,4 +93,5 @@ export class CountryListComponent implements OnInit {
   }
 
 }
+
 
