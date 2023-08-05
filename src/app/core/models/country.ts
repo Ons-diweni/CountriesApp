@@ -1,7 +1,7 @@
 import { Continent } from "../enums/continent.enum";
 
 export interface Country {
-    id:string;
+    id:number;
     nom: string;
     population: number;
     superficie: number;
