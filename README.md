@@ -4,12 +4,9 @@
 ![](https://img.shields.io/badge/Json_Server-blueviolet?style=for-the-badge)
 
 
+### • $\ \ \textcolor{blueviolet}{run-server-with}$  : $\ \{json-server \ --watch \  \ db.json }$   
 
 ![screen one](./demo/screen-one.png)
 ![screen two](./demo/screen-two.png)
 
-
-
-
-### • $\ \ \textcolor{blueviolet}{run-server-with}$  : $\ \{json-server \ --watch \  \ db.json }$ 
 
