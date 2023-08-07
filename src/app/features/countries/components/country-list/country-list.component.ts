@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { LiveAnnouncer } from '@angular/cdk/a11y';
 import { Country } from 'src/app/core/models/country';
 import { CountryService } from 'src/app/core/services/country/country.service';
@@ -21,7 +22,7 @@ export class CountryListComponent implements OnInit {
   dataSource = new MatTableDataSource<Country>([]);
   countriesList: Country[] = [];
 
-  constructor(private countryService: CountryService, private _liveAnnouncer: LiveAnnouncer, private _dialog: MatDialog) { }
+  constructor(private countryService: CountryService, private _liveAnnouncer: LiveAnnouncer, private _dialog: MatDialog,private router: Router) { }
   @ViewChild(MatSort) sort!: MatSort;
   ngAfterViewInit() {
     this.dataSource.sort = this.sort;
@@ -76,6 +77,14 @@ export class CountryListComponent implements OnInit {
       },
       error: console.log,
     });
+  }
+
+  /**
+   * 
+   * @param id 
+   */
+  viewCountryDetails(id: number) {
+    this.router.navigate(['country', id]);
   }
 
 

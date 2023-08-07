@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { AddEditCountryComponent } from 'src/app/features/countries/add-edit-country/add-edit-country.component';
+import { AddEditCountryComponent } from 'src/app/features/countries/components/add-edit-country/add-edit-country.component';
 
 @Component({
   selector: 'app-header',

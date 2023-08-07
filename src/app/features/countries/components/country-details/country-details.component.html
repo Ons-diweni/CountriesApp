@@ -1,0 +1,30 @@
+ <mat-grid-list cols="2" rowHeight="1:1">
+    <mat-grid-tile>
+        <div class="country-details">
+            <div class="detail-row">
+                <div class="detail-label">Nom:</div>
+                <div class="detail-value">{{ country?.nom }}</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Population:</div>
+                <div class="detail-value">{{ country?.population }}</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Superficie:</div>
+                <div class="detail-value">{{ country?.superficie }}</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Continent:</div>
+                <div class="detail-value">{{ country?.continent }}</div>
+            </div>
+            <div class="detail-row">
+                <div class="detail-label">Produit intérieur brut:</div>
+                <div class="detail-value">{{ country?.pib }}</div>
+            </div>
+        </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="right">
+        <img src="{{ country?.image }}" class="customImage"/>
+    </mat-grid-tile>
+</mat-grid-list> 
+

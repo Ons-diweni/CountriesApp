@@ -26,8 +26,16 @@ export class AddEditCountryComponent implements OnInit {
 
   onFileSelected(event: any): void {
     this.selectedFile = event.target.files[0] ?? null;
-
   }
+/* 
+  if (this.selectedFile) {
+    const cheminImage = `assets/images/countries/${this.selectedFile.name}`;
+    // Enregistrer le chemin de l'image dans votre formulaire
+    this.form.get('image')?.setValue(cheminImage);
+    // Émettre l'événement dataUpdated
+    this.countryService.notifyDataUpdated();
+  }
+   */
   constructor(
     private formBuilder: FormBuilder,
     private countryService: CountryService,
@@ -55,7 +63,6 @@ export class AddEditCountryComponent implements OnInit {
           },
           error: (error) => {
             console.log(error);
-
           }
         })
 
@@ -72,7 +79,6 @@ export class AddEditCountryComponent implements OnInit {
           },
           error: (error) => {
             console.log(error);
-
           }
         })
 

@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { CountriesRoutingModule } from './countries-routing.module';
 import { CountriesComponent } from './countries.component';
-import { CountryListComponent } from './country-list/country-list.component';
-import { AddEditCountryComponent } from './add-edit-country/add-edit-country.component';
+import { CountryListComponent } from './components/country-list/country-list.component';
+import { AddEditCountryComponent } from './components/add-edit-country/add-edit-country.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
@@ -15,6 +15,11 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
 import {MatTableModule} from '@angular/material/table';
+import { CountryDetailsComponent } from './components/country-details/country-details.component';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatListModule} from '@angular/material/list';
+import { ScreenOneComponent } from './pages/screen-one/screen-one.component';
+import { SharedModule } from '../../shared/shared.module';
 
 
 
@@ -26,9 +31,12 @@ import {MatTableModule} from '@angular/material/table';
     CountriesComponent,
     CountryListComponent,
     AddEditCountryComponent,
+    CountryDetailsComponent,
+    ScreenOneComponent,
   ],
   imports: [
     CommonModule,
+    SharedModule,
     CountriesRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -39,7 +47,10 @@ import {MatTableModule} from '@angular/material/table';
     MatSelectModule,
     MatRadioModule,
     MatTableModule,
-    MatIconModule
+    MatIconModule,
+    MatGridListModule,
+    MatListModule,
+    
   ]
 })
 export class CountriesModule { }
