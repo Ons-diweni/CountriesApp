@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Country } from '../../models/country';
-import { Observable, Subject} from 'rxjs';
+import { Observable, Subject, map} from 'rxjs';
 
 
 @Injectable({
@@ -66,7 +66,14 @@ export class CountryService {
    * @param id 
    * @returns 
    */
-  findById(id: number): Observable<Country> {
+/*   findById(id: number): Observable<Country> {
     return this.http.get<Country>(`${this.apiUrl}?id=${id}`);
+  }
+ */
+
+  findById(id: number): Observable<Country> {
+    return this.http.get<Country[]>(`${this.apiUrl}?id=${id}`).pipe(
+      map(data => data[0]) // Extract the first element of the array
+    );
   }
 }

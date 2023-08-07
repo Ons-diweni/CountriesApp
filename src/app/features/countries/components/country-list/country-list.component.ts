@@ -20,7 +20,7 @@ export class CountryListComponent implements OnInit {
 
   displayedColumns: string[] = ['nom', 'population', 'superficie', 'continent', 'pib', 'image', ' '];
   dataSource = new MatTableDataSource<Country>([]);
-  countriesList: Country[] = [];
+  //countriesList: Country[] = [];
 
   constructor(private countryService: CountryService, private _liveAnnouncer: LiveAnnouncer, private _dialog: MatDialog,private router: Router) { }
   @ViewChild(MatSort) sort!: MatSort;
@@ -84,7 +84,7 @@ export class CountryListComponent implements OnInit {
    * @param id 
    */
   viewCountryDetails(id: number) {
-    this.router.navigate(['country', id]);
+    this.router.navigate(['countries/country', id]);
   }
 
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Continent } from 'src/app/core/enums/continent.enum';
 import { Country } from 'src/app/core/models/country';
 import { CountryService } from 'src/app/core/services/country/country.service';
 
@@ -26,7 +27,8 @@ export class CountryDetailsComponent implements OnInit {
       next: (data) => {
         this.country = data;
         console.log(data);
-        console.log(this.country.image);
+        console.log(this.country);
+        console.log(this.country.id);
       },
       error: console.log,
     });

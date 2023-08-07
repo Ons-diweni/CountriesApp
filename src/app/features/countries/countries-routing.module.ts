@@ -8,7 +8,7 @@ import { CountriesComponent } from './countries.component';
 
 
 const routes: Routes = [
-  { path: '', component: CountryListComponent },
+  { path: '', component: CountryListComponent , pathMatch:'full'},
   {path:'new' , component:AddEditCountryComponent},
   {path:'country/:id' , component:CountryDetailsComponent},
   {path:'screenOne' , component:ScreenOneComponent},
