@@ -22,7 +22,6 @@ export class CountryService {
     this.dataUpdatedSource.next();
   }
 
-
   constructor(private http: HttpClient) { }
 
   /**
@@ -73,7 +72,7 @@ export class CountryService {
 
   findById(id: number): Observable<Country> {
     return this.http.get<Country[]>(`${this.apiUrl}?id=${id}`).pipe(
-      map(data => data[0]) // Extract the first element of the array
+      map(data => data[0]) 
     );
   }
 }

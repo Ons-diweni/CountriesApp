@@ -72,7 +72,6 @@ export class CountryListComponent implements OnInit {
 
     dialogRef.afterClosed().subscribe({
       next: (val) => {
-        console.log(val);
         this.getCountriesList();
       },
       error: console.log,
@@ -84,7 +83,7 @@ export class CountryListComponent implements OnInit {
    * @param id 
    */
   viewCountryDetails(id: number) {
-    this.router.navigate(['countries/country', id]);
+    this.router.navigate(['countries', id]);
   }
 
 

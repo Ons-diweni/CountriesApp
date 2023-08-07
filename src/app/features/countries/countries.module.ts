@@ -18,8 +18,8 @@ import {MatTableModule} from '@angular/material/table';
 import { CountryDetailsComponent } from './components/country-details/country-details.component';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
-import { ScreenOneComponent } from './pages/screen-one/screen-one.component';
 import { SharedModule } from '../../shared/shared.module';
+import { CountryDetailsScreenComponent } from './pages/country-details-screen/country-details-screen.component';
 
 
 
@@ -32,7 +32,7 @@ import { SharedModule } from '../../shared/shared.module';
     CountryListComponent,
     AddEditCountryComponent,
     CountryDetailsComponent,
-    ScreenOneComponent,
+    CountryDetailsScreenComponent,
   ],
   imports: [
     CommonModule,
