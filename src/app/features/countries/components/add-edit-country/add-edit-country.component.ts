@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject, Output, EventEmitter } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Continent } from 'src/app/core/enums/continent.enum';
 import { CountryService } from 'src/app/core/services/country/country.service';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
@@ -27,26 +27,18 @@ export class AddEditCountryComponent implements OnInit {
   onFileSelected(event: any): void {
     this.selectedFile = event.target.files[0] ?? null;
   }
-/* 
-  if (this.selectedFile) {
-    const cheminImage = `assets/images/countries/${this.selectedFile.name}`;
-    // Enregistrer le chemin de l'image dans votre formulaire
-    this.form.get('image')?.setValue(cheminImage);
-    // Émettre l'événement dataUpdated
-    this.countryService.notifyDataUpdated();
-  }
-   */
+
   constructor(
     private formBuilder: FormBuilder,
     private countryService: CountryService,
     private dialogRef: MatDialogRef<AddEditCountryComponent>,
     @Inject(MAT_DIALOG_DATA) public data: Country) {
     this.form = this.formBuilder.group({
-      nom: '',
-      population: '',
-      superficie: '',
-      continent: '',
-      pib: '',
+      nom: ['', Validators.required],
+      population: ['', [Validators.required, Validators.min(0)]],
+      superficie: ['', [Validators.required, Validators.min(0)]],
+      continent: ['', Validators.required],
+      pib: ['', [Validators.required, Validators.min(0)]],
       image: '',
     })
   }

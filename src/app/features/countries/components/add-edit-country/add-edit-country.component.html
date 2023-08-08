@@ -7,21 +7,25 @@
             <mat-form-field appearance="outline">
                 <mat-label>Nom</mat-label>
                 <input matInput type="text" formControlName="nom">
+                <small [hidden]="!form.get('nom')?.errors?.['required'] || form.get('nom')?.untouched">  This field is required </small>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Population</mat-label>
                 <input matInput type="number" formControlName="population">
+                <small [hidden]="!form.get('population')?.errors?.['required'] || form.get('population')?.untouched">  This field is required </small>
             </mat-form-field>
         </div>
         <div class="row">
             <mat-form-field appearance="outline">
                 <mat-label>Superficie</mat-label>
                 <input matInput type="number" formControlName="superficie">
+                <small [hidden]="!form.get('superficie')?.errors?.['required'] || form.get('superficie')?.untouched">  This field is required </small>
             </mat-form-field>
             <div class="row">
                 <mat-form-field appearance="outline">
                     <mat-label>PIB</mat-label>
                     <input matInput type="number" formControlName="pib">
+                    <small [hidden]="!form.get('pib')?.errors?.['required'] || form.get('pib')?.untouched">  This field is required </small>
                 </mat-form-field>
             </div>
         </div>
@@ -33,6 +37,7 @@
                         {{c}}
                     </mat-option>
                 </mat-select>
+                <small [hidden]="!form.get('continent')?.errors?.['required'] || form.get('continent')?.untouched">  This field is required </small>
             </mat-form-field>
             <div>
                 <button type="button" mat-raised-button (click)="fileInput.click()" class="custumImageButton"
