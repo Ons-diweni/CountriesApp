@@ -2,40 +2,45 @@
 
   <!-- Name Column -->
   <ng-container matColumnDef="nom">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="" (click)="sortData('nom')">
       Nom
+      <mat-icon mat-sort-header-icon class="mat-sort-icon" >swap_vert</mat-icon>
     </th>
     <td mat-cell *matCellDef="let element"> {{element.nom}} </td>
   </ng-container>
 
   <!-- Population Column -->
   <ng-container matColumnDef="population">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="" (click)="sortData('population')">
       Population
+      <mat-icon mat-sort-header-icon class="mat-sort-icon" >swap_vert</mat-icon>
     </th>
     <td mat-cell *matCellDef="let element"> {{element.population}} </td>
   </ng-container>
 
   <!-- Superficie Column -->
   <ng-container matColumnDef="superficie">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="" (click)="sortData('superficie')">
       Superficie
+      <mat-icon mat-sort-header-icon class="mat-sort-icon" >swap_vert</mat-icon>
     </th>
     <td mat-cell *matCellDef="let element"> {{element.superficie}} </td>
   </ng-container>
 
   <!-- pib Column -->
   <ng-container matColumnDef="pib">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="" (click)="sortData('pib')">
       PIB
+      <mat-icon mat-sort-header-icon class="mat-sort-icon" >swap_vert</mat-icon>
     </th>
     <td mat-cell *matCellDef="let element"> {{element.pib}} </td>
   </ng-container>
 
   <!-- Continent Column -->
   <ng-container matColumnDef="continent">
-    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="" (click)="sortData('continent')">
       Continent
+      <mat-icon mat-sort-header-icon class="mat-sort-icon" >swap_vert</mat-icon>
     </th>
     <td mat-cell *matCellDef="let element"> {{element.continent}} </td>
   </ng-container>
@@ -53,10 +58,10 @@
     <th mat-header-cell *matHeaderCellDef mat-sort-header> </th>
     <td mat-cell *matCellDef="let row">
       <button mat-icon-button color="primary" (click)="openEditForm(row)" >
-        <mat-icon class="customIcon">edit</mat-icon>
+        <mat-icon class="edit-delete-Icon">edit</mat-icon>
       </button>
       <button mat-icon-button color="warn" (click)="deleteCountry(row.id)" >
-        <mat-icon class="customIcon">delete</mat-icon>
+        <mat-icon class="edit-delete-Icon">delete</mat-icon>
       </button>
     </td>
   </ng-container>

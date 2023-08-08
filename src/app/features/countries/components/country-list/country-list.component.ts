@@ -92,20 +92,25 @@ export class CountryListComponent implements OnInit {
   }
   }
 
-
-  /** Announce the change in sort state for assistive technology. */
-  announceSortChange(sortState: Sort) {
-    // This example uses English messages. If your application supports
-    // multiple language, you would internationalize these strings.
-    // Furthermore, you can customize the message to add additional
-    // details about the values being sorted.
-    if (sortState.direction) {
-      this._liveAnnouncer.announce(`Sorted ${sortState.direction}ending`);
+  /**
+   * 
+   * @param column name of the column 
+   */
+  sortData(column: keyof Country) {
+    const data = [...this.dataSource.data];
+  
+    if (column === 'nom' || column === 'continent') {
+      data.sort((a, b) => a[column].localeCompare(b[column]));
     } else {
-      this._liveAnnouncer.announce('Sorting cleared');
+      data.sort((a, b) => {
+        const numA = a[column] as number;
+        const numB = b[column] as number;
+        return numA < numB ? -1 : (numA > numB ? 1 : 0);
+      });
     }
+  
+    this.dataSource.data = data;
   }
-
 }
 
 

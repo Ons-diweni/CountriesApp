@@ -2,7 +2,7 @@
   "countries": [
     {
       "nom": "Maroc",
-      "population": 4637963,
+      "population": 7846513,
       "superficie": 551695,
       "continent": "Afrique",
       "pib": 2958,
@@ -11,7 +11,7 @@
     },
     {
       "nom": "Tunisie",
-      "population": 12293610,
+      "population": 46139784,
       "superficie": 163610,
       "continent": "Afrique",
       "pib": 48972,
@@ -20,7 +20,7 @@
     },
     {
       "nom": "France",
-      "population": 7986431,
+      "population": 9746545,
       "superficie": 98645312,
       "continent": "Europe",
       "pib": 7864531,
