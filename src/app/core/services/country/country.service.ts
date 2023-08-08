@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Country } from '../../models/country';
 import { Observable, Subject, map} from 'rxjs';
+import * as Papa from 'papaparse';
+
 
 
 @Injectable({
@@ -74,5 +76,19 @@ export class CountryService {
     return this.http.get<Country[]>(`${this.apiUrl}?id=${id}`).pipe(
       map(data => data[0]) 
     );
+  }
+
+  exportToCSV(countries: Country[]): void {
+    const csvData = Papa.unparse(countries, {
+      header: true,
+    });
+
+    const blob = new Blob([csvData], { type: 'text/csv' });
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'countries.csv';
+    a.click();
+    window.URL.revokeObjectURL(url);
   }
 }

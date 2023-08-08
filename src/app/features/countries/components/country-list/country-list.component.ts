@@ -110,6 +110,14 @@ export class CountryListComponent implements OnInit {
     }
   
     this.dataSource.data = data;
+  }  
+
+  /**
+   * 
+   */
+  exportToCSV() {
+    const countriesToExport = this.dataSource.data;
+    this.countryService.exportToCSV(countriesToExport);
   }
 }
 

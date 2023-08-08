@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild} from '@angular/core';
+import { CountryListComponent } from './components/country-list/country-list.component';
+
 
 @Component({
   selector: 'app-countries',
@@ -10,9 +12,14 @@ export class CountriesComponent implements OnInit {
   buttonTopRight= 'Exporter en CSV';
   buttonTopLeft='Recherche';
   buttonBottom='Ajouter';
+  @ViewChild(CountryListComponent, { static: true }) countryListComponent!: CountryListComponent;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onExportCSVClicked() {
+    this.countryListComponent.exportToCSV();
+  }
 }
