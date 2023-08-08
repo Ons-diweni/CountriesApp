@@ -82,8 +82,14 @@ export class CountryListComponent implements OnInit {
    * 
    * @param id 
    */
-  viewCountryDetails(id: number) {
+  viewCountryDetails(id: number,event: MouseEvent) {
+    const targetElement = event.target as HTMLElement;
+  if (
+    !targetElement.closest('.customIcon') &&
+    !targetElement.closest('.mat-icon-button')
+  ) {
     this.router.navigate(['countries', id]);
+  }
   }
 
 
